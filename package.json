@@ -1,0 +1,32 @@
+{
+  "name": "healing-blues",
+  "version": "1.0.0",
+  "description": "Node for website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node nodehb.js",
+    "dev": "nodemon nodehb.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChhutiMistry/MySecondProject.git"
+  },
+  "keywords": [
+    "healing",
+    "blues"
+  ],
+  "author": "Chhuti Mistry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChhutiMistry/MySecondProject/issues"
+  },
+  "homepage": "https://github.com/ChhutiMistry/MySecondProject#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "chalk": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongodb": "^4.5.0"
+  }
+}
