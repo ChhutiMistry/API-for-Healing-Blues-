@@ -26,6 +26,32 @@ app.get('/category',(req,res) => {
      })
 })
 
+// Sort (Low to High)
+app.get('/sortfromlow',(req,res) => {
+     let sort = {price:1}
+     let query = {}
+     if(req.query.sort){
+          sort={cost:Number(req.query.sort)}
+     }
+     db.collection('services').find(query).sort(sort).toArray((err,result) => {
+          if(err) throw err;
+          res.send(result)
+     })
+})
+
+// Sort (High to Low)
+app.get('/sortfromhigh',(req,res) => {
+     let sort = {price:-1}
+     let query = {}
+     if(req.query.sort){
+          sort={cost:Number(req.query.sort)}
+     }
+     db.collection('services').find(query).sort(sort).toArray((err,result) => {
+          if(err) throw err;
+          res.send(result)
+     })
+})
+
 // Service details
 app.get('/services',(req,res) => {
      db.collection(`services`).find().toArray((err, result) => {
